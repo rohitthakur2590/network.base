@@ -1,11 +1,12 @@
 ---
-- name: Publish the changes
+- name: Publish the persist changes
   ansible.scm.git_publish:
     path: "{{ repository['path'] }}"
-    token: "{{ token }}"
-  when: token is defined
+  # when: token is undefined
 
-- name: Publish the changes
-  ansible.scm.git_publish:
-    path: "{{ repository['path'] }}"
-  when: token is undefined
+# - name: Publish the changes
+#   ansible.scm.git_publish:
+#     path: "{{ repository['path'] }}"
+#     token: "{{ token }}"
+#   when: token is defined
+
